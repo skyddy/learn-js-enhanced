@@ -1,0 +1,89 @@
+{
+  "chapters": [
+    {
+      "id": "fundamentals",
+      "title": "JavaScript Fundamentals",
+      "description": "Master the core concepts of JavaScript programming",
+      "lessons": [
+        "variables-and-types",
+        "operators",
+        "control-flow",
+        "functions-basics",
+        "arrays",
+        "objects",
+        "scope",
+        "hoisting",
+        "data-structures",
+        "error-handling"
+      ]
+    },
+    {
+      "id": "advanced-concepts",
+      "title": "Advanced JavaScript Concepts",
+      "description": "Dive deep into advanced JavaScript features and patterns",
+      "lessons": [
+        "closures",
+        "this-keyword",
+        "prototypes",
+        "classes",
+        "inheritance",
+        "modules",
+        "iterators",
+        "generators",
+        "proxies",
+        "reflection"
+      ]
+    },
+    {
+      "id": "async-javascript",
+      "title": "Asynchronous JavaScript",
+      "description": "Learn to handle asynchronous operations effectively",
+      "lessons": [
+        "callbacks",
+        "promises",
+        "promises-advanced",
+        "async-await",
+        "event-loop",
+        "timers",
+        "fetch-api",
+        "async-patterns",
+        "workers",
+        "streams"
+      ]
+    },
+    {
+      "id": "dom-manipulation",
+      "title": "DOM Manipulation",
+      "description": "Master browser DOM manipulation and event handling",
+      "lessons": [
+        "dom-basics",
+        "selectors",
+        "events",
+        "forms",
+        "delegation",
+        "traversal",
+        "manipulation",
+        "storage",
+        "canvas",
+        "animations"
+      ]
+    },
+    {
+      "id": "modern-javascript",
+      "title": "Modern JavaScript",
+      "description": "Explore modern JavaScript features and best practices",
+      "lessons": [
+        "destructuring",
+        "spread-rest",
+        "template-literals",
+        "modules-esm",
+        "optional-chaining",
+        "nullish-coalescing",
+        "decorators",
+        "typescript-basics",
+        "performance",
+        "testing"
+      ]
+    }
+  ]
+}

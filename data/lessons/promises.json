@@ -1,0 +1,16 @@
+{
+  "id": "promises",
+  "title": "Working with Promises",
+  "description": "Learn how to use Promises for handling asynchronous operations",
+  "content": "Promises are objects representing the eventual completion (or failure) of an asynchronous operation. They provide a cleaner way to handle asynchronous code compared to callbacks.",
+  "code": {
+    "html": "<div id=\"output\" class=\"output\">Click the button to start</div>\n<button id=\"fetchBtn\">Fetch Data</button>",
+    "css": ".output {\n  padding: 1rem;\n  margin-top: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  min-height: 100px;\n}\n\nbutton {\n  padding: 0.5rem 1rem;\n  background: #007bff;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n}",
+    "js": "// Complete the delay function to create a Promise\n// that resolves after the specified milliseconds\nfunction delay(ms) {\n  // Your code here\n}\n\nconst fetchBtn = document.getElementById('fetchBtn');\nconst output = document.getElementById('output');\n\nfetchBtn.addEventListener('click', () => {\n  output.textContent = 'Loading...';\n  \n  // Use the delay function to simulate an API call\n  // After 2 seconds, update the output to 'Data loaded!'\n  // Handle any errors that might occur\n});"
+  },
+  "solution": {
+    "html": "<div id=\"output\" class=\"output\">Click the button to start</div>\n<button id=\"fetchBtn\">Fetch Data</button>",
+    "css": ".output {\n  padding: 1rem;\n  margin-top: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  min-height: 100px;\n  font-family: sans-serif;\n  background-color: #f5f5f5;\n}\n\nbutton {\n  padding: 0.5rem 1rem;\n  background: #007bff;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  font-family: sans-serif;\n}\n\nbutton:hover {\n  background: #0056b3;\n}",
+    "js": "function delay(ms) {\n  return new Promise(resolve => {\n    setTimeout(resolve, ms);\n  });\n}\n\nconst fetchBtn = document.getElementById('fetchBtn');\nconst output = document.getElementById('output');\n\nfetchBtn.addEventListener('click', () => {\n  output.textContent = 'Loading...';\n  \n  delay(2000)\n    .then(() => {\n      output.textContent = 'Data loaded successfully!';\n      console.log('Promise resolved');\n      return delay(1000);\n    })\n    .then(() => {\n      console.log('Additional operation completed');\n    })\n    .catch(error => {\n      output.textContent = 'Error: ' + error.message;\n      console.error('Something went wrong:', error);\n    });\n});"
+  }
+}

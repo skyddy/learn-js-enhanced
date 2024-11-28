@@ -1,0 +1,8 @@
+{
+  "id": "functions",
+  "title": "Functions",
+  "description": "Master JavaScript functions and their usage",
+  "content": "Functions are reusable blocks of code that perform specific tasks.",
+  "code": "// Create a function that adds two numbers\n\n// Your code here",
+  "solution": "function add(a, b) {\n  return a + b;\n}\n\nconsole.log(add(5, 3));"
+}

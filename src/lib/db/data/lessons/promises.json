@@ -1,0 +1,8 @@
+{
+  "id": "promises",
+  "title": "Working with Promises",
+  "description": "Learn how to use Promises for handling asynchronous operations",
+  "content": "Promises are objects representing the eventual completion (or failure) of an asynchronous operation. They provide a cleaner way to handle asynchronous code compared to callbacks.\n\nA Promise is in one of these states:\n- pending: initial state, neither fulfilled nor rejected\n- fulfilled: operation completed successfully\n- rejected: operation failed\n\nYou can create a new Promise using the Promise constructor, which takes an executor function with 'resolve' and 'reject' parameters.",
+  "code": "// Create a Promise that resolves after a delay\nfunction delay(ms) {\n  // Your code here: Return a Promise that resolves after ms milliseconds\n}\n\n// Use the delay function\ndelay(2000)\n  .then(() => console.log('Resolved after 2 seconds'))\n  .catch(error => console.error('Something went wrong:', error));",
+  "solution": "function delay(ms) {\n  return new Promise(resolve => {\n    setTimeout(resolve, ms);\n  });\n}\n\n// Use the delay function\ndelay(2000)\n  .then(() => console.log('Resolved after 2 seconds'))\n  .catch(error => console.error('Something went wrong:', error));\n\n// Let's also demonstrate Promise.all\nPromise.all([\n  delay(1000).then(() => 'First'),\n  delay(2000).then(() => 'Second')\n])\n  .then(results => console.log('All promises completed:', results));"
+}

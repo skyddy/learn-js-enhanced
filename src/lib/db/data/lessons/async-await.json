@@ -1,0 +1,8 @@
+{
+  "id": "async-await",
+  "title": "Async/Await",
+  "description": "Learn the modern way to handle Promises with async/await syntax",
+  "content": "The async and await keywords provide a more elegant way to work with Promises, making asynchronous code look and behave more like synchronous code.",
+  "code": "// Convert this Promise chain to async/await\nfunction fetchUser() {\n  return new Promise(resolve => {\n    setTimeout(() => resolve({ id: 1, name: 'John' }), 1000);\n  });\n}\n\n// Your code here: Create an async function that uses await\n// to get the user and log their name",
+  "solution": "function fetchUser() {\n  return new Promise(resolve => {\n    setTimeout(() => resolve({ id: 1, name: 'John' }), 1000);\n  });\n}\n\nasync function getUser() {\n  try {\n    const user = await fetchUser();\n    console.log('User name:', user.name);\n    return user;\n  } catch (error) {\n    console.error('Error fetching user:', error);\n  }\n}\n\n// Call the async function\ngetUser();"
+}

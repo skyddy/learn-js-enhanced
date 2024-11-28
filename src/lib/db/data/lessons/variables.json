@@ -1,0 +1,8 @@
+{
+  "id": "variables",
+  "title": "Variables and Data Types",
+  "description": "Learn how to declare variables and understand different data types in JavaScript",
+  "content": "JavaScript variables are containers for storing data values. You can declare them using 'let', 'const', or 'var'.",
+  "code": "// Try declaring some variables\nlet name = 'John';\nconst age = 25;\n\n// Your code here",
+  "solution": "let name = 'John';\nconst age = 25;\nconsole.log(name, age);"
+}

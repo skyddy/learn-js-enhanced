@@ -1,0 +1,38 @@
+{
+  "id": "operators",
+  "title": "Operators",
+  "description": "Learn about different types of operators in JavaScript",
+  "content": "# JavaScript Operators\n\nOperators are essential for performing operations on variables and values.\n\n## Your Task\n\nCreate the following functions using different operators:\n\n1. Create a function `calculate(a, b)` that:\n   - Adds the numbers if both are positive\n   - Multiplies them if either is negative\n\n2. Create a function `compareNumbers(a, b)` that:\n   - Returns true if a is greater than b\n   - Returns false otherwise\n\n3. Create a function `checkAge(age)` that:\n   - Returns true if age is 18 or above\n   - Returns false otherwise\n\n4. Create a function `combineStrings(str1, str2)` that:\n   - Joins two strings with a space between them",
+  "code": {
+    "html": "<div id=\"output\"></div>",
+    "css": "#output {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  font-family: monospace;\n}",
+    "js": "function calculate(a, b) {\n  // Your code here\n}\n\nfunction compareNumbers(a, b) {\n  // Your code here\n}\n\nfunction checkAge(age) {\n  // Your code here\n}\n\nfunction combineStrings(str1, str2) {\n  // Your code here\n}"
+  },
+  "solution": {
+    "html": "<div id=\"output\"></div>",
+    "css": "#output {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  font-family: monospace;\n}",
+    "js": "function calculate(a, b) {\n  return (a > 0 && b > 0) ? a + b : a * b;\n}\n\nfunction compareNumbers(a, b) {\n  return a > b;\n}\n\nfunction checkAge(age) {\n  return age >= 18;\n}\n\nfunction combineStrings(str1, str2) {\n  return str1 + ' ' + str2;\n}"
+  },
+  "tests": [
+    {
+      "name": "calculate adds positive numbers",
+      "test": "if (calculate(5, 3) !== 8) throw new Error('calculate(5, 3) should add numbers and return 8');"
+    },
+    {
+      "name": "calculate multiplies when negative",
+      "test": "if (calculate(-2, 3) !== -6) throw new Error('calculate(-2, 3) should multiply and return -6');"
+    },
+    {
+      "name": "compareNumbers works correctly",
+      "test": "if (compareNumbers(5, 3) !== true || compareNumbers(3, 5) !== false) throw new Error('compareNumbers not working correctly');"
+    },
+    {
+      "name": "checkAge validates adults",
+      "test": "if (checkAge(20) !== true || checkAge(16) !== false) throw new Error('checkAge not working correctly');"
+    },
+    {
+      "name": "combineStrings joins correctly",
+      "test": "if (combineStrings('Hello', 'World') !== 'Hello World') throw new Error('combineStrings not working correctly');"
+    }
+  ]
+}

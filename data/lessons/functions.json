@@ -1,0 +1,42 @@
+{
+  "id": "functions",
+  "title": "Functions",
+  "description": "Master JavaScript functions and their usage",
+  "content": "# Functions in JavaScript\n\nFunctions are reusable blocks of code that perform specific tasks. They can take inputs (parameters) and return outputs.\n\n## Your Task\n\nCreate the following functions:\n\n1. Create a function `add(a, b)` that adds two numbers\n2. Create a function `multiply(a, b)` that multiplies two numbers\n3. Create a function `greet(name)` that returns a greeting string\n4. Create a function `isEven(number)` that checks if a number is even\n\nMake sure each function:\n- Takes the correct parameters\n- Returns the expected value\n- Handles the logic correctly",
+  "code": {
+    "html": "<div id=\"output\"></div>",
+    "css": "#output {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  font-family: monospace;\n}",
+    "js": "// 1. Addition function\nfunction add(a, b) {\n  // Your code here\n}\n\n// 2. Multiplication function\nfunction multiply(a, b) {\n  // Your code here\n}\n\n// 3. Greeting function\nfunction greet(name) {\n  // Your code here\n}\n\n// 4. Number check function\nfunction isEven(number) {\n  // Your code here\n}"
+  },
+  "solution": {
+    "html": "<div id=\"output\"></div>",
+    "css": "#output {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  font-family: monospace;\n}",
+    "js": "function add(a, b) {\n  return a + b;\n}\n\nfunction multiply(a, b) {\n  return a * b;\n}\n\nfunction greet(name) {\n  return `Hello, ${name}!`;\n}\n\nfunction isEven(number) {\n  return number % 2 === 0;\n}"
+  },
+  "tests": [
+    {
+      "name": "add function works with positive numbers",
+      "test": "if (add(5, 3) !== 8) throw new Error('add(5, 3) should return 8');"
+    },
+    {
+      "name": "add function works with negative numbers",
+      "test": "if (add(-2, -3) !== -5) throw new Error('add(-2, -3) should return -5');"
+    },
+    {
+      "name": "multiply function works correctly",
+      "test": "if (multiply(4, 3) !== 12) throw new Error('multiply(4, 3) should return 12');"
+    },
+    {
+      "name": "multiply handles zero",
+      "test": "if (multiply(5, 0) !== 0) throw new Error('multiply(5, 0) should return 0');"
+    },
+    {
+      "name": "greet returns correct greeting",
+      "test": "if (greet('John') !== 'Hello, John!') throw new Error('greet(\"John\") should return \"Hello, John!\"');"
+    },
+    {
+      "name": "isEven correctly identifies even numbers",
+      "test": "if (!isEven(2) || isEven(3)) throw new Error('isEven() not working correctly');"
+    }
+  ]
+}

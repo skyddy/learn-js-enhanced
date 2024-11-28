@@ -1,0 +1,16 @@
+{
+  "id": "async-await",
+  "title": "Async/Await",
+  "description": "Learn the modern way to handle Promises with async/await syntax",
+  "content": "The async and await keywords provide a more elegant way to work with Promises, making asynchronous code look and behave more like synchronous code.",
+  "code": {
+    "html": "<div id=\"userCard\" class=\"card\">\n  <h2>User Profile</h2>\n  <div id=\"userData\">No user loaded</div>\n</div>\n<button id=\"loadBtn\">Load User</button>",
+    "css": ".card {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n\n#userData {\n  margin-top: 1rem;\n}\n\nbutton {\n  padding: 0.5rem 1rem;\n  background: #007bff;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n}",
+    "js": "// This function simulates an API call\nfunction fetchUser() {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      resolve({\n        id: 1,\n        name: 'John Doe',\n        email: 'john@example.com',\n        role: 'Developer'\n      });\n    }, 1000);\n  });\n}\n\n// Create an async function called loadUserData\n// Use await to get the user data and display it\n// Handle any potential errors\n// Your code here\n\nconst loadBtn = document.getElementById('loadBtn');\nconst userData = document.getElementById('userData');\n\nloadBtn.addEventListener('click', () => {\n  userData.textContent = 'Loading...';\n  // Call your async function here\n});"
+  },
+  "solution": {
+    "html": "<div id=\"userCard\" class=\"card\">\n  <h2>User Profile</h2>\n  <div id=\"userData\">No user loaded</div>\n</div>\n<button id=\"loadBtn\">Load User</button>",
+    "css": ".card {\n  padding: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n  font-family: sans-serif;\n  background-color: #f5f5f5;\n}\n\n#userData {\n  margin-top: 1rem;\n}\n\nbutton {\n  padding: 0.5rem 1rem;\n  background: #007bff;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  font-family: sans-serif;\n}\n\nbutton:hover {\n  background: #0056b3;\n}",
+    "js": "function fetchUser() {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      resolve({\n        id: 1,\n        name: 'John Doe',\n        email: 'john@example.com',\n        role: 'Developer'\n      });\n    }, 1000);\n  });\n}\n\nasync function loadUserData() {\n  try {\n    const user = await fetchUser();\n    \n    userData.innerHTML = `\n      <p><strong>Name:</strong> ${user.name}</p>\n      <p><strong>Email:</strong> ${user.email}</p>\n      <p><strong>Role:</strong> ${user.role}</p>\n    `;\n    \n    console.log('User loaded:', user);\n    return user;\n  } catch (error) {\n    userData.textContent = 'Error loading user';\n    console.error('Error:', error);\n    throw error;\n  }\n}\n\nconst loadBtn = document.getElementById('loadBtn');\nconst userData = document.getElementById('userData');\n\nloadBtn.addEventListener('click', () => {\n  userData.textContent = 'Loading...';\n  loadUserData()\n    .then(() => console.log('Load operation completed'))\n    .catch(error => console.error('Operation failed:', error));\n});"
+  }
+}
